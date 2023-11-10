@@ -1,6 +1,4 @@
-﻿using System.Linq.Expressions;
-
-int[] pole1 = new int[5];
+﻿int[] pole1 = new int[5];
 int[] pole2 = new int[5];
 int favcislo;
 
@@ -29,12 +27,67 @@ for (int i = 0; i < 5; i++)
 
 Console.WriteLine(); //medzera
 
-Console.WriteLine("Zoradenie cisiel od najmensieho po najvacsie");
+//index of() 
+Console.Write("Zadaj svoje oblubene cislo: ");
+favcislo = int.Parse(Console.ReadLine());
+int pozicia = Array.IndexOf(pole1, favcislo); //hlada int/string na poli 1 ak najde output je pozicia, ak nenajde output -1
+if (pozicia >= 0)
+{
+    //output pozicia je dany podla reversed pola 1
+    Console.WriteLine("Cislo " + favcislo + " sa nachadza na " + (pozicia + 1) + ". mieste v poli 1");
+}
+else
+{
+    Console.WriteLine("Cislo " + favcislo + " sa nenachadza v poli 1");
+}
 
+
+int pozicia2 = Array.IndexOf(pole2, favcislo);
+if (pozicia2 >= 0)
+{
+    //output pozicia je dany podla reversed pola 2
+    Console.WriteLine("Cislo " + favcislo + " sa nachadza na " + (pozicia2 + 1) + ". mieste v poli 2");
+}
+else
+{
+    Console.WriteLine("Cislo " + favcislo + " sa nenachadza v poli 2");
+}
+
+Console.ReadKey(); // breakpoint
+Console.WriteLine(); //medzera
+
+//last indexof()
+Console.WriteLine("last index of()");
+int pozicia3 = Array.LastIndexOf(pole1, favcislo);
+if (pozicia >= 0)
+{
+    //output pozicia je dany podla reversed pola 1
+    Console.WriteLine("Posledny vyskyt cisla " + favcislo + " je na pozicii " + (pozicia3 + 1) + ". v poli 1");
+}
+else
+{
+    Console.WriteLine("Cislo " + favcislo + " sa nenachadza v poli 1");
+}
+
+int pozicia4 = Array.LastIndexOf(pole2, favcislo);
+if (pozicia >= 0)
+{
+    Console.WriteLine("Posledny vyskyt cisla " + favcislo + " je na pozicii " + (pozicia4 + 1) + ". v poli 2");
+}
+else
+{
+    Console.WriteLine("Cislo " + favcislo + " sa nenachadza v poli 2");
+}
+
+Console.ReadKey(); // breakpoint
+Console.WriteLine(); Console.WriteLine();//medzera
+
+Console.WriteLine("Zoradenie cisiel od najmensieho po najvacsie");
 //Zoradenie pre pole 1
 Console.WriteLine("Pole 1:");
 Array.Sort(pole1);
-foreach (int i in pole1) { 
+foreach (int i in pole1)
+{
     Console.Write("{0} ", i);
 }
 
@@ -72,50 +125,6 @@ foreach (int i in pole2)
 Console.ReadKey(); // breakpoint
 Console.WriteLine(); Console.WriteLine(); //medzera
 
-//index of() 
-Console.Write("Zadaj svoje oblubene cislo: ");
-favcislo = int.Parse(Console.ReadLine());
-int pozicia = Array.IndexOf(pole1, favcislo); //hlada int/string na poli 1 ak najde output je pozicia, ak nenajde output -1
-if(pozicia >= 0)
-{
-    //output pozicia je dany podla reversed pola 1
-    Console.WriteLine("Cislo " + favcislo + " sa nachadza na " + (pozicia + 1) + " mieste v poli 1");
-}
-else
-{
-    Console.WriteLine("Cislo " + favcislo + " sa nenachadza v poli 1");
-}
-
-
-int pozicia2 = Array.IndexOf(pole2, favcislo);
-if (pozicia2 >= 0)
-{
-    //output pozicia je dany podla reversed pola 2
-    Console.WriteLine("Cislo " + favcislo + " sa nachadza na " + (pozicia2 + 1) + " mieste v poli 2");
-}
-else
-{
-    Console.WriteLine("Cislo " + favcislo + " sa nenachadza v poli 2");
-}
-
-Console.ReadKey(); // breakpoint
-Console.WriteLine(); //medzera
-
-/*
-Console.WriteLine("last index of()");
-int pozicia3 = Array.LastIndexOf(pole1, favcislo); //asi zle
-if (pozicia >= 0)
-{
-    //output pozicia je dany podla reversed pola 1
-    Console.WriteLine("Cislo " + favcislo + " sa nachadza na " + (pozicia + 1) + " mieste v poli 1");
-}
-else
-{
-    Console.WriteLine("Cislo " + favcislo + " sa nenachadza v poli 1");
-}
-*/
-
-Console.WriteLine(); //medzera
 
 // copy()
 int[] pole3 = new int[5];
@@ -137,8 +146,8 @@ Console.WriteLine("2 - Najmensie cislo");
 Console.WriteLine("3 - Priemerne cislo");
 Console.WriteLine("4 - Sucet cisiel");
 Console.Write("Co chces vediet z poli 1-3 ? : ");
-Console.WriteLine();
 int answer = int.Parse(Console.ReadLine());
+Console.WriteLine();
 switch (answer)
 {
     case 1:
@@ -168,5 +177,4 @@ switch (answer)
 Console.WriteLine(); //medzera
 
 
-Console.ReadKey();  
-
+Console.ReadKey();

@@ -1,0 +1,14 @@
+Z:\CRG\3.Rocnik-csharp\OP\OP\bin\Debug\net7.0\OP.exe
+Z:\CRG\3.Rocnik-csharp\OP\OP\bin\Debug\net7.0\OP.deps.json
+Z:\CRG\3.Rocnik-csharp\OP\OP\bin\Debug\net7.0\OP.runtimeconfig.json
+Z:\CRG\3.Rocnik-csharp\OP\OP\bin\Debug\net7.0\OP.dll
+Z:\CRG\3.Rocnik-csharp\OP\OP\bin\Debug\net7.0\OP.pdb
+Z:\CRG\3.Rocnik-csharp\OP\OP\obj\Debug\net7.0\OP.GeneratedMSBuildEditorConfig.editorconfig
+Z:\CRG\3.Rocnik-csharp\OP\OP\obj\Debug\net7.0\OP.AssemblyInfoInputs.cache
+Z:\CRG\3.Rocnik-csharp\OP\OP\obj\Debug\net7.0\OP.AssemblyInfo.cs
+Z:\CRG\3.Rocnik-csharp\OP\OP\obj\Debug\net7.0\OP.csproj.CoreCompileInputs.cache
+Z:\CRG\3.Rocnik-csharp\OP\OP\obj\Debug\net7.0\OP.dll
+Z:\CRG\3.Rocnik-csharp\OP\OP\obj\Debug\net7.0\refint\OP.dll
+Z:\CRG\3.Rocnik-csharp\OP\OP\obj\Debug\net7.0\OP.pdb
+Z:\CRG\3.Rocnik-csharp\OP\OP\obj\Debug\net7.0\OP.genruntimeconfig.cache
+Z:\CRG\3.Rocnik-csharp\OP\OP\obj\Debug\net7.0\ref\OP.dll
