@@ -1,0 +1,14 @@
+Z:\CRG\3.Rocnik-csharp\OP2\OP2\obj\Debug\net7.0\OP2.GeneratedMSBuildEditorConfig.editorconfig
+Z:\CRG\3.Rocnik-csharp\OP2\OP2\obj\Debug\net7.0\OP2.AssemblyInfoInputs.cache
+Z:\CRG\3.Rocnik-csharp\OP2\OP2\obj\Debug\net7.0\OP2.AssemblyInfo.cs
+Z:\CRG\3.Rocnik-csharp\OP2\OP2\obj\Debug\net7.0\OP2.csproj.CoreCompileInputs.cache
+Z:\CRG\3.Rocnik-csharp\OP2\OP2\bin\Debug\net7.0\OP2.exe
+Z:\CRG\3.Rocnik-csharp\OP2\OP2\bin\Debug\net7.0\OP2.deps.json
+Z:\CRG\3.Rocnik-csharp\OP2\OP2\bin\Debug\net7.0\OP2.runtimeconfig.json
+Z:\CRG\3.Rocnik-csharp\OP2\OP2\bin\Debug\net7.0\OP2.dll
+Z:\CRG\3.Rocnik-csharp\OP2\OP2\bin\Debug\net7.0\OP2.pdb
+Z:\CRG\3.Rocnik-csharp\OP2\OP2\obj\Debug\net7.0\OP2.dll
+Z:\CRG\3.Rocnik-csharp\OP2\OP2\obj\Debug\net7.0\refint\OP2.dll
+Z:\CRG\3.Rocnik-csharp\OP2\OP2\obj\Debug\net7.0\OP2.pdb
+Z:\CRG\3.Rocnik-csharp\OP2\OP2\obj\Debug\net7.0\OP2.genruntimeconfig.cache
+Z:\CRG\3.Rocnik-csharp\OP2\OP2\obj\Debug\net7.0\ref\OP2.dll
