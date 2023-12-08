@@ -37,22 +37,37 @@ namespace Bojovnik_Hra
 
         public void Zapas()
         {
+            Bojovnik b1 = bojovnik1;
+            Bojovnik b2 = bojovnik2;
+
             Console.WriteLine("Vitajte v Arene!");
             Console.WriteLine($"Dnes se utkaju {bojovnik1} s {bojovnik2}! \n");
-            Console.WriteLine("Zapas moze zacat...");
-            Console.ReadKey();
-            
-            // cyklus z bojem
-            while (bojovnik1.Nazive() && bojovnik2.Nazive())
+
+            bool zacinaBojovnik2 = (kocka.hod() <= kocka.VratPocetSten() / 2);
+            if (zacinaBojovnik2)
             {
-                bojovnik1.Utok(bojovnik2);
+                b1 = bojovnik2;
+                b2 = bojovnik1;
+            }
+
+            Console.WriteLine("Začínat bude bojovník {0}! \nZápas může začít...", b1);
+            Console.ReadKey();
+
+
+            // cyklus z bojem
+            while (b1.Nazive() && b2.Nazive())
+            {
+                b1.Utok(b2);
                 Vykresli();
-                VypisSpravy(bojovnik1.VratPosldnuSpravu()); // zpráva o útoku
-                VypisSpravy(bojovnik2.VratPosldnuSpravu()); // zpráva o obraně
-                bojovnik2.Utok(bojovnik1);
-                Vykresli();
-                VypisSpravy(bojovnik2.VratPosldnuSpravu()); // zpráva o útoku
-                VypisSpravy(bojovnik1.VratPosldnuSpravu()); // zpráva o obraně
+                VypisSpravy(b1.VratPosldnuSpravu()); // zpráva o útoku
+                VypisSpravy(b2.VratPosldnuSpravu()); // zpráva o obraně
+                if (b2.Nazive())
+                {
+                    b2.Utok(b1);
+                    Vykresli();
+                    VypisSpravy(b2.VratPosldnuSpravu()); // zpráva o útoku
+                    VypisSpravy(b1.VratPosldnuSpravu()); // zpráva o obraně
+                }
                 Console.WriteLine();
             }
         }

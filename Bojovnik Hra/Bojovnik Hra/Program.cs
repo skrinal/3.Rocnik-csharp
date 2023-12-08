@@ -9,21 +9,14 @@ namespace Bojovnik_Hra
         static void Main(string[] args)
         {
 
-            Kocka kocka = new Kocka(10);
-            Bojovnik bojovnik = new Bojovnik("Kamenistakos", 100, 20, 10, kocka);
-
-            Console.WriteLine("Život: {0}", bojovnik.GrafickyZivot()); // test GrafickyZivot();
-
-
-            Bojovnik super = new Bojovnik("Shadow", 60, 18, 15, kocka);  // Nova Super
-            super.Utok(bojovnik);
-
-            Console.WriteLine(super.VratPosldnuSpravu());
-            Console.WriteLine(bojovnik.VratPosldnuSpravu());
-
-
-            Console.WriteLine("Život: {0}", bojovnik.GrafickyZivot());
-
+            Kocka kostka = new Kocka(10);
+            Bojovnik kamen = new Bojovnik("Kamen", 100, 20, 10, kostka);
+            Bojovnik shadow = new Bojovnik("Shadow", 60, 18, 15, kostka);
+            Arena arena = new Arena(kamen, shadow, kostka);
+            // zápas
+            
+            arena.Zapas();
+            
             Console.ReadKey();
 
         }
