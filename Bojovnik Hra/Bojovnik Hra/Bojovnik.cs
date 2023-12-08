@@ -2,12 +2,13 @@
 
 class Bojovnik
 {
-    private string meno;
-    private int zivot;
-    private int maxZivot;
-    private int utok;
-    private int obrana;
-    private Kocka kocka;
+    protected string meno;
+    protected int zivot;
+    protected int maxZivot;
+    protected int utok;
+    protected int obrana;
+    protected Kocka kocka;
+    private string sprava;
 
     public Bojovnik(string meno, int zivot, int utok, int obrana, Kocka kocka)
     {
@@ -24,22 +25,28 @@ class Bojovnik
         return (zivot > 0);
     }
 
-    public string GrafickyZivot()
+    protected string GrafickyUkazatel(int aktualny,  int maximalny)
     {
         string s = "[";
-        int celkem = 20;
-        double pocet = Math.Round(((double)zivot / maxZivot) * celkem);
+        int celkom = 20;
+        double pocet = Math.Round(((double)aktualny / maximalny) * celkom);
         if ((pocet == 0) && (Nazive()))
             pocet = 1;
         for (int i = 0; i < pocet; i++)
             s += "#";
-        s = s.PadRight(celkem + 1);
+        s = s.PadRight(celkom + 1);
         s += "]";
         return s;
     }
 
+    public string GrafickyZivot()
 
-    public void Utok (Bojovnik super)
+    {
+        return GrafickyUkazatel(zivot, maxZivot);
+    }
+
+
+    public virtual void Utok (Bojovnik super)
     {
         int uder = utok + kocka.hod();
         NastavSpravu(String.Format($"{meno} utoci s uderom za {uder} hp"));
@@ -56,7 +63,7 @@ class Bojovnik
             if (zivot <= 0)
             {
                 zivot = 0;
-                sprava += "a zomrel";
+                sprava += " a zomrel";
             }   
         }
         else
@@ -69,9 +76,8 @@ class Bojovnik
         return meno;
     }
 
-    private string sprava;
-    
-    private void NastavSpravu(string sprava)
+
+    protected void NastavSpravu(string sprava)
     {
         this.sprava = sprava;
     }

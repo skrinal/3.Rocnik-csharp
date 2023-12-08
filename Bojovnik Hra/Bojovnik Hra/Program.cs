@@ -9,10 +9,10 @@ namespace Bojovnik_Hra
         static void Main(string[] args)
         {
 
-            Kocka kostka = new Kocka(10);
-            Bojovnik kamen = new Bojovnik("Kamen", 100, 20, 10, kostka);
-            Bojovnik shadow = new Bojovnik("Shadow", 60, 18, 15, kostka);
-            Arena arena = new Arena(kamen, shadow, kostka);
+            Kocka kocka = new Kocka(10);
+            Bojovnik kamen = new Bojovnik("Kamen", 100, 20, 10, kocka);
+            Bojovnik shadow = new Mag("Shadow", 60, 15, 12, kocka, 30, 45);
+            Arena arena = new Arena(kamen, shadow, kocka);
             // zápas
             
             arena.Zapas();

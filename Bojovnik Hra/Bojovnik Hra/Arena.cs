@@ -24,9 +24,23 @@ namespace Bojovnik_Hra
         {
             Console.Clear();
             Console.WriteLine("-------------- Aréna -------------- \n");
-            Console.WriteLine("Zdraví bojovníků: \n");
-            Console.WriteLine("{0} {1}", bojovnik1, bojovnik1.GrafickyZivot());
-            Console.WriteLine("{0} {1}", bojovnik2, bojovnik2.GrafickyZivot());
+            Console.WriteLine("Bojovníci: \n");
+            VypisBojovnika(bojovnik1);
+            Console.WriteLine();
+            VypisBojovnika(bojovnik2);
+            Console.WriteLine();
+        }
+
+        private void VypisBojovnika(Bojovnik b)
+        {
+            Console.WriteLine(b);
+            Console.Write("Život: ");
+            Console.WriteLine(b.GrafickyZivot());
+            if (b is Mag)
+            {
+                Console.Write("Mana: ");
+                Console.WriteLine(((Mag)b).GrafickaMana());
+            }
         }
 
         private void VypisSpravy(string sprava)
@@ -57,6 +71,8 @@ namespace Bojovnik_Hra
             // cyklus z bojem
             while (b1.Nazive() && b2.Nazive())
             {
+                Vykresli();
+                Thread.Sleep(500);
                 b1.Utok(b2);
                 Vykresli();
                 VypisSpravy(b1.VratPosldnuSpravu()); // zpráva o útoku
@@ -68,7 +84,7 @@ namespace Bojovnik_Hra
                     VypisSpravy(b2.VratPosldnuSpravu()); // zpráva o útoku
                     VypisSpravy(b1.VratPosldnuSpravu()); // zpráva o obraně
                 }
-                Console.WriteLine();
+            Console.WriteLine();
             }
         }
     }
