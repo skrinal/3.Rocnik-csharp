@@ -64,7 +64,7 @@ namespace Bojovnik_Hra
                 b2 = bojovnik1;
             }
 
-            Console.WriteLine("Začínat bude bojovník {0}! \nZápas může začít...", b1);
+            Console.WriteLine("Začínat bude bojovník {0}! \nZápas može začat...", b1);
             Console.ReadKey();
 
 
